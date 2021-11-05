@@ -1,4 +1,5 @@
 import "../App.css";
+import "./home.css";
 import React from "react";
 import { Box, Grommet, Heading } from "grommet";
 import { Link } from "react-router-dom";
@@ -9,10 +10,16 @@ export default function Home() {
   return (
     <Grommet full>
       <NavBar />
-      <Heading fill color="dark-1" textAlign="center" size="80px">
+      <Heading
+        className="home-heading"
+        fill
+        color="dark-1"
+        textAlign="center"
+        size="80px"
+      >
         Projects
       </Heading>
-      <Box justify="center" align="center">
+      <Box margin={{ bottom: "100px" }} justify="center" align="center">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/stats">
           <StlyedNFTCard
             alignSelf="center"

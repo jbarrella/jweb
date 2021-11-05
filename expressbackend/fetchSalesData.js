@@ -1,7 +1,7 @@
 // const { response } = require("express");
 // const { set } = require("./app");
 
-// const db = require("monk")("localhost:27017/nftArt");
+const db = require("monk")("localhost:27017/nftArt");
 const { ethers } = require("ethers");
 const axios = require("axios");
 const tabletojson = require("tabletojson").Tabletojson;
@@ -60,6 +60,12 @@ async function getSUPRTxnsData(page) {
   // console.log("Processing table...");
 
   const table = tabletojson.convert(rawHTML);
+  if (table.length == 0) {
+    console.log("waiting");
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log("waited");
+    getSUPRTxnsData(page);
+  }
   const cleanTable = [];
   for (row of table[0]) {
     data = {
@@ -100,9 +106,33 @@ function getNSales(page) {
 }
 
 async function sendPromises() {
-  const pages = [...Array(10).keys()].slice(1,);
-  const data = await Promise.all(pages.map(getNSales));
-  console.log(data);
+  const nPages = 2;
+  let allData = { days: {}, collected: Date.now() };
+  for (pageBatch = 0; pageBatch <= 200; pageBatch++) {
+    // const pages = [...Array(10).keys()].slice(1);
+    let pages = [...Array(nPages).keys()];
+    pages = pages.map((p) => p + 1 + nPages * pageBatch);
+    console.log(pages);
+    const data = await Promise.all(pages.map(getNSales));
+
+    for (page of data) {
+      if (Object.keys(page).length == 0) {
+        continue;
+      }
+      for (day of Object.keys(page)) {
+        if (day in allData.days) {
+          allData.days[day] += page[day];
+        } else {
+          allData.days[day] = page[day];
+        }
+      }
+    }
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+  }
+  const superrareSales = db.get("superrareSales");
+  const inserted = await superrareSales.insert(allData);
+  console.log("You may exit safely.");
+  // console.log(allData);
 }
 
 async function log() {

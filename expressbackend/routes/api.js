@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const nftCharts = require("./nftCharts");
+const nftart = require("./nftart");
 
 /* GET home page. */
 router.get("/", function (req, res) {
@@ -10,6 +10,6 @@ router.get("/", function (req, res) {
   });
 });
 
-router.use("/nftCharts", nftCharts)
+router.use("/nftart", nftart);
 
 module.exports = router;
