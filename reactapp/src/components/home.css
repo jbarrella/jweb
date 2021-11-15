@@ -1,0 +1,57 @@
+.bio {
+  /* background-color: #333333; */
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.bioBox {
+  /* background-color: #333333; */
+  border-radius: 20px;
+  margin-bottom: 40px;
+  width: 50vw;
+}
+
+.imageBox {
+  border-radius: 50%;
+}
+
+.rolesText {
+  font-family: "roboto mono";
+}
+
+.themeBody {
+  transition: background-color 0.3s linear;
+}
+
+.sectionHeading {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.timelineNode1 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.timelineNode2 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.timelineNode3 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 100px;
+}
+
+.uniNode {
+  margin-bottom: 50px;
+}

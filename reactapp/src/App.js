@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Stats from "./components/Stats.js";
+import About from "./components/About.js";
+// import Projects from "./components/Projects.js";
 import Home from "./components/Home.js";
 import { Grommet } from "grommet";
 
@@ -22,6 +24,8 @@ export default function App() {
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/stats" component={Stats} />
+        <Route exact path="/about" component={About} />
+        {/* <Route exact path="/project" component={Project} /> */}
       </Router>
     </Grommet>
   );

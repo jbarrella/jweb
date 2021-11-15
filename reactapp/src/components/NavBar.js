@@ -1,62 +1,98 @@
-import React from "react";
-import { Heading, Header, Grommet, Nav, Box, Grid, Menu } from "grommet";
-import { Github, Linkedin, Wordpress } from "grommet-icons";
-import { StyledAnchor, StyledHomeLink, StyledPageLink } from "./StyledComponents";
+import { React, useRef } from "react";
+import {
+  Heading,
+  Header,
+  Grommet,
+  Nav,
+  Box,
+  Grid,
+  Button,
+  Anchor,
+} from "grommet";
+import { Github, Linkedin, Wordpress, Sun, Moon } from "grommet-icons";
+import {
+  StyledAnchor,
+  StyledHomeLink,
+  StyledPageLink,
+  ThemeSwitch,
+} from "./StyledComponents";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home({ projectSection, aboutSection, theme, setTheme }) {
+  const accentTextColor = () => (theme == "light" ? "#7d4cdb" : "#FD6FFF");
   return (
     <Grommet>
-      <Header
-        pad={{ left: "small", right: "small", vertical: "small" }}
-        justify="center"
-        gap="33vw"
+      <div
+        // style={{ background: theme == "light" ? "#eee4d4" : "#252525" }}
+        className="headerDiv"
       >
-        <Grid
-          columns={["medium"]}
-          rows={["100px", "50px"]}
-          areas={[
-            { name: "homeTitle", start: [0, 0], end: [1, 0] },
-            { name: "links", start: [0, 1], end: [1, 1] },
-          ]}
+        <Heading
+          alignSelf="end"
+          className="title"
+          level="2"
+          margin={{ bottom: "10px" }}
+          color="#7f6df2"
         >
-          <Heading level="1" margin="none" color="brand" gridArea="homeTitle" alignSelf="center">
-            <StyledHomeLink className="title-mobile" to="/">
-              JB
-            </StyledHomeLink>
-            <StyledHomeLink className="title-desktop" to="/">
-              Jason Barrella
-            </StyledHomeLink>
+          <StyledHomeLink className="title-mobile" to="/">
+            JB
+          </StyledHomeLink>
+          <StyledHomeLink className="title-desktop" to="/">
+            Jason Barrella
+          </StyledHomeLink>
+        </Heading>
+        <Box className="sectionLinks" direction="row" gap="medium">
+          <Heading
+            color="#7f6df2"
+            alignSelf="end"
+            level="3"
+            margin={{ bottom: "10px" }}
+          >
+            <Button
+              onClick={() => {
+                aboutSection.current.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="sectionButton"
+              focusIndicator={false}
+            >
+              About
+            </Button>
           </Heading>
-          <Nav direction="row" gridArea="links" alignSelf="center">
-            <StyledAnchor
-              icon={<Github />}
-              href="https://github.com/jbarrella"
-            />
-            <StyledAnchor
-              icon={<Linkedin />}
-              href="https://www.linkedin.com/in/jason-barrella-725910178/"
-            />
-            <StyledAnchor
-              icon={<Wordpress />}
-              href="https://theismatlarge.wordpress.com"
-            />
-          </Nav>
-        </Grid>
-        <Box direction="row" gap="medium">
-          <Heading level="3">
-            <StyledPageLink>
-            About
-            </StyledPageLink>
-          </Heading>
-          <Heading level="3">
-            <StyledPageLink>
-            Projects
-            </StyledPageLink>
+          <Heading
+            color="#7f6df2"
+            alignSelf="end"
+            level="3"
+            margin={{ bottom: "10px" }}
+          >
+            <Button
+              onClick={() => {
+                projectSection.current.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="sectionButton"
+              focusIndicator={false}
+            >
+              Projects
+            </Button>{" "}
           </Heading>
         </Box>
-      </Header>
+        <ThemeSwitch
+          border={{ color: "accent-1", size: "3px" }}
+          alignSelf="end"
+          width="53px"
+        >
+          <Button
+            focusIndicator={false}
+            icon={
+              theme == "light" ? (
+                <Moon color="black" size="25px" />
+              ) : (
+                <Sun color="white" className="lightIcon" size="25px" />
+              )
+            }
+            onClick={() => setTheme(theme == "light" ? "dark" : "light")}
+          ></Button>
+        </ThemeSwitch>
+      </div>
     </Grommet>
   );
 }

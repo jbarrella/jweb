@@ -1,29 +1,27 @@
-import { Card, Anchor, Heading } from "grommet";
+import { Card, Anchor, Heading, Box } from "grommet";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledAnchor = styled(Anchor)`
   &:not(:hover) svg {
-    stroke: #7d4cdb;
-    fill: #7d4cdb;
+    stroke: #7f6df2;
+    fill: #7f6df2;
     transition: stroke 0.3s ease-in, fill 0.3s linear;
   }
   &:hover svg {
     stroke: #6fffb0;
     fill: #6fffb0;
   }
-  padding-left: 0px;
 `;
 
 export const StyledHomeLink = styled(Link)`
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
 `;
 
 export const StyledPageLink = styled(StyledHomeLink)`
   &:not(:hover) {
-    color: #7d4cdb;
+    /* color: #7d4cdb; */
     transition: color 0.3s ease-in;
   }
   &:hover {
@@ -48,4 +46,21 @@ export const StlyedNFTCard = styled(Card)`
 
 export const StyledHomeHeading = styled(Heading)`
   font-size: 200px;
+`;
+
+export const ThemeSwitch = styled(Box)`
+  grid-area: 1 / 3 / 1 / 3;
+  border-radius: 10px;
+  justify-self: right;
+  &:hover {
+    background-color: #bbbbbb;
+    transition: background-color 0.3s linear;
+  }
+`;
+
+export const HeroBox = styled(Box)`
+  border-radius: 20px;
+  &::after {
+    background-color: blue;
+  }
 `;

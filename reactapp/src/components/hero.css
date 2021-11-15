@@ -1,0 +1,39 @@
+.heroBox {
+  position: relative;
+  height: 500px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.heroBox::before {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* background-image: url("./gametheory_prisoners_dilemma.gif"); */
+  background-image: url("mobius_bind.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  /* opacity: ; */
+}
+
+.heroTextBox {
+  position: relative;
+}
+
+.heroCredit {
+  position: relative;
+  text-align: right;
+}
+
+.motto {
+  font-family: "roboto mono";
+}
