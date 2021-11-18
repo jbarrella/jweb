@@ -143,16 +143,16 @@ export default function Interactive({ dltheme }) {
 
     ctx.shadowBlur = 0;
     ctx.globalAlpha = 1.0;
-    ctx.font = "22px Roboto";
+    ctx.font = "22px Roboto Mono";
     ctx.fillStyle = "black";
     ctx.fillText("B", 700 * bpos - 6, lineYPos + 8);
     ctx.fillText("C", 700 * cpos - 7, lineYPos + 8);
-    ctx.font = "20px Roboto";
+    ctx.font = "22px Roboto Mono";
     ctx.fillStyle = textColor();
-    ctx.fillText("0.5", 700 / 2 - 15, lineYPos - 90);
-    ctx.font = "15px Roboto";
-    ctx.fillText("0.25", 700 / 4 - 5, lineYPos - 70);
-    ctx.fillText("0.75", (3 * 700) / 4 - 24, lineYPos - 70);
+    ctx.fillText("0.5", 700 / 2 - 20, lineYPos - 90);
+    ctx.font = "17px Roboto Mono";
+    ctx.fillText("0.25", 700 / 4 - 6, lineYPos - 70);
+    ctx.fillText("0.75", (3 * 700) / 4 - 25, lineYPos - 70);
   };
   useEffect(() => {
     draw();

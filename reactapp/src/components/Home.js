@@ -45,7 +45,7 @@ export default function Home({ theme, setTheme }) {
               </Text>
               <Box height="10px" />
               <Text className="rolesText" color="red">
-                Freelance developer / problem-solver
+                Data Science / Blockchain / Full-stack
               </Text>
             </Box>
             <Box
@@ -57,7 +57,7 @@ export default function Home({ theme, setTheme }) {
           </PpBox>
           <Text margin={{ top: "30px" }} bioText color={textColor}>
             Jason is a Masters graduate in Physics from the University of Cape
-            Town in 2022. He has since n working as a freelance software
+            Town in 2022. He has since been working as a freelance software
             developer. He has a passion for solving difficult problems related
             to STEM fields. When not working, he enjoys climbing, reading, and
             travelling.
@@ -147,7 +147,7 @@ export default function Home({ theme, setTheme }) {
                 image:
                   "url(https://cdn.knownorigin.io/cdn/images/network/1/edition/2643000)",
                 size: "cover",
-                opacity: "0.5"
+                opacity: "0.5",
               }}
               elevation="none"
             >

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Stats from "./components/Stats.js";
 import GameTheory from "./components/GameTheory.js";
-// import Projects from "./components/Projects.js";
 import Home from "./components/Home";
 import { Grommet } from "grommet";
 
