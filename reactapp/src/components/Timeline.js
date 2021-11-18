@@ -93,16 +93,10 @@ export default function Timeline({ theme }) {
               className="timelineNode2"
               id="6"
             />
-            {/* <FaUniversity
-                    className="uniNode"
-                    fill={textColor()}
-                    size="30px"
-                    id="6"
-                  /> */}
             <Text color={textColor} className="text" margin={{ left: "20px" }}>
               <b>2020</b> - Began a
               <span style={{ color: "#FD6FFF" }}> Masters degree</span> in
-              Physics (research scholarship).
+              high-energy physics (research scholarship).
             </Text>
           </Box>
           <Box direction="row">
@@ -125,7 +119,7 @@ export default function Timeline({ theme }) {
             />
             <Text color={textColor} className="text" margin={{ left: "20px" }}>
               <b>2021</b> - <span style={{ color: "#FD6FFF" }}>Tutoring</span>{" "}
-              in 3rd year electrodynamics and special relativity
+              in 3rd year electrodynamics and special relativity.
             </Text>
           </Box>
         </Box>

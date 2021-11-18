@@ -157,7 +157,7 @@ export default function GameTheory({ theme, setTheme }) {
           pad="medium"
         >
           <Text className="sectionHeading" size="23px" color={textColor()}>
-            Interactive Example
+            Interactive Illustration
           </Text>
           <Interactive dltheme={theme} />
         </ContentBox>
