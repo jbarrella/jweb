@@ -1,6 +1,40 @@
-import { Card, Anchor, Heading, Box } from "grommet";
+import { Card, Anchor, Heading, Box, Menu, Text } from "grommet";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+export const GreetText = styled(Text)`
+  font-size: min(100px, 13vw);
+`;
+
+export const MottoText = styled(Text)`
+  font-size: min(50px, 8vw);
+  font-family: "roboto mono";
+  margin-top: min(90px, 10vw);
+`;
+
+export const ContentBox = styled(Box)`
+  border-radius: 20px;
+  margin-bottom: 40px;
+  width: clamp(50vw, 800px, 90vw);
+`;
+
+export const ProjectHeading = styled(Heading)`
+  font-size: min(100px, 20vw);
+  margin-top: 50px;
+  margin-bottom: 100px;
+`;
+
+export const PpBox = styled(Box)`
+  flex-direction: row;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nameText {
+    font-size: min(50px, 10vw);
+    line-height: 1.5;
+  }
+`;
 
 export const StyledAnchor = styled(Anchor)`
   &:not(:hover) svg {
@@ -21,7 +55,6 @@ export const StyledHomeLink = styled(Link)`
 
 export const StyledPageLink = styled(StyledHomeLink)`
   &:not(:hover) {
-    /* color: #7d4cdb; */
     transition: color 0.3s ease-in;
   }
   &:hover {
@@ -31,6 +64,9 @@ export const StyledPageLink = styled(StyledHomeLink)`
 
 export const StlyedNFTCard = styled(Card)`
   transition: transform 0.5s ease;
+  padding: 25%;
+  text-align: center;
+  width: clamp(22vw, 340px, 90vw);
   &:hover {
     transform: scale(1.05);
   }
@@ -49,12 +85,26 @@ export const StyledHomeHeading = styled(Heading)`
 `;
 
 export const ThemeSwitch = styled(Box)`
-  grid-area: 1 / 3 / 1 / 3;
   border-radius: 10px;
   justify-self: right;
+  padding: 0;
   &:hover {
     background-color: #bbbbbb;
     transition: background-color 0.3s linear;
+  }
+`;
+
+export const HamburgerBox = styled(ThemeSwitch)`
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
+`;
+
+export const Hamburger = styled(Menu)`
+  padding: 0;
+  margin: 0;
+  @media screen and (min-width: 500px) {
+    display: none;
   }
 `;
 
@@ -63,4 +113,20 @@ export const HeroBox = styled(Box)`
   &::after {
     background-color: blue;
   }
+`;
+
+export const gameTheoryProjectBox = styled(Box)`
+  &::after {
+    background-color: blue;
+  }
+`
+
+export const ProjectBox = styled(Box)`
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+  }
+  gap: 50px;
 `;

@@ -1,0 +1,19 @@
+.stack {
+  position: relative;
+}
+
+.rangeBox {
+  width: min(80vw, 720px);
+}
+
+.slidecontainer {
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.canvas {
+  align-self: center;
+  width: min(80vw, 720px);
+}

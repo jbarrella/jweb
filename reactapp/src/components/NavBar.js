@@ -1,100 +1,143 @@
-import { React, useRef } from "react";
+import { React } from "react";
+import { Heading, Grommet, Box, Button, Menu } from "grommet";
+import { Sun, Moon, Menu as MenuIcon } from "grommet-icons";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
-  Heading,
-  Header,
-  Grommet,
-  Nav,
-  Box,
-  Grid,
-  Button,
-  Anchor,
-} from "grommet";
-import { Github, Linkedin, Wordpress, Sun, Moon } from "grommet-icons";
-import {
-  StyledAnchor,
   StyledHomeLink,
-  StyledPageLink,
   ThemeSwitch,
+  StyledPageLink,
+  Hamburger,
+  HamburgerBox,
 } from "./StyledComponents";
 import "./navbar.css";
-import { Link } from "react-router-dom";
 
-function Home({ projectSection, aboutSection, theme, setTheme }) {
-  const accentTextColor = () => (theme == "light" ? "#7d4cdb" : "#FD6FFF");
+export default function Home({ projectSection, aboutSection, theme, setTheme }) {
+  const location = useLocation();
+  const history = useHistory();
+  const handleSectionLink = (sectionRef, sectionId) => {
+    if (location.pathname == "/") {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      setTimeout(() => {
+        document.getElementById(sectionId).scrollIntoView();
+      }, 0);
+    }
+  };
   return (
     <Grommet>
-      <div
-        // style={{ background: theme == "light" ? "#eee4d4" : "#252525" }}
-        className="headerDiv"
-      >
-        <Heading
-          alignSelf="end"
-          className="title"
-          level="2"
-          margin={{ bottom: "10px" }}
-          color="#7f6df2"
-        >
-          <StyledHomeLink className="title-mobile" to="/">
-            JB
-          </StyledHomeLink>
-          <StyledHomeLink className="title-desktop" to="/">
-            Jason Barrella
-          </StyledHomeLink>
-        </Heading>
+      <div className="headerDiv">
         <Box className="sectionLinks" direction="row" gap="medium">
           <Heading
-            color="#7f6df2"
             alignSelf="end"
-            level="3"
-            margin={{ bottom: "10px" }}
+            level="2"
+            margin={{ bottom: "10px", right: "20px" }}
+            color="#7f6df2"
           >
-            <Button
-              onClick={() => {
-                aboutSection.current.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="sectionButton"
-              focusIndicator={false}
-            >
-              About
-            </Button>
+            <StyledHomeLink className="title-mobile" to="/">
+              JB
+            </StyledHomeLink>
+            <StyledHomeLink className="title-desktop" to="/">
+              Jason Barrella
+            </StyledHomeLink>
           </Heading>
           <Heading
             color="#7f6df2"
             alignSelf="end"
             level="3"
             margin={{ bottom: "10px" }}
+            className="buttons"
           >
-            <Button
-              onClick={() => {
-                projectSection.current.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="sectionButton"
-              focusIndicator={false}
-            >
-              Projects
-            </Button>{" "}
+            <StyledPageLink to="/">
+              <Button
+                onClick={() => {
+                  handleSectionLink(aboutSection, "about");
+                }}
+                className="sectionButton"
+                focusIndicator={false}
+              >
+                About
+              </Button>
+            </StyledPageLink>
+          </Heading>
+          <Heading
+            color="#7f6df2"
+            alignSelf="end"
+            level="3"
+            margin={{ bottom: "10px" }}
+            className="buttons"
+          >
+            <StyledPageLink to="/">
+              <Button
+                onClick={() => {
+                  handleSectionLink(projectSection, "projects");
+                }}
+                className="sectionButton"
+                focusIndicator={false}
+              >
+                Projects
+              </Button>
+            </StyledPageLink>
           </Heading>
         </Box>
-        <ThemeSwitch
-          border={{ color: "accent-1", size: "3px" }}
-          alignSelf="end"
-          width="53px"
+        <Box
+          width="150px"
+          direction="row"
+          className="buttonBox"
+          gap="medium"
+          justify="end"
         >
-          <Button
-            focusIndicator={false}
-            icon={
-              theme == "light" ? (
-                <Moon color="black" size="25px" />
-              ) : (
-                <Sun color="white" className="lightIcon" size="25px" />
-              )
-            }
-            onClick={() => setTheme(theme == "light" ? "dark" : "light")}
-          ></Button>
-        </ThemeSwitch>
+          <ThemeSwitch
+            border={{ color: "accent-1", size: "3px" }}
+            alignSelf="end"
+            width="53px"
+            height="53px"
+          >
+            <Button
+              focusIndicator={false}
+              icon={
+                theme == "light" ? (
+                  <Moon color="black" size="25px" />
+                ) : (
+                  <Sun color="white" className="lightIcon" size="25px" />
+                )
+              }
+              onClick={() => setTheme(theme == "light" ? "dark" : "light")}
+            ></Button>
+          </ThemeSwitch>
+          <HamburgerBox
+            alignSelf="end"
+            justify="center"
+            width="53px"
+            height="53px"
+            background={{ color: "white" }}
+            className="menuBox"
+          >
+            <Hamburger
+              className="menu"
+              focusIndicator={false}
+              icon={<MenuIcon size="25px" />}
+              items={[
+                {
+                  label: "About",
+                  onClick: () => {
+                    history.push("/");
+                    handleSectionLink(aboutSection, "about");
+                  },
+                },
+                {
+                  label: "Projects",
+                  onClick: () => {
+                    history.push("/");
+                    handleSectionLink(projectSection, "projects");
+                  },
+                },
+              ]}
+            ></Hamburger>
+          </HamburgerBox>
+        </Box>
       </div>
     </Grommet>
   );
 }
-
-export default Home;

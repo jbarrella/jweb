@@ -1,6 +1,6 @@
 .heroBox {
   position: relative;
-  height: 500px;
+  height: min(500px, 90vw);
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 50px;
@@ -16,17 +16,16 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  /* background-image: url("./gametheory_prisoners_dilemma.gif"); */
   background-image: url("mobius_bind.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
-  /* opacity: ; */
 }
 
 .heroTextBox {
   position: relative;
+  height: min(450px, 77vw);
 }
 
 .heroCredit {
@@ -34,6 +33,10 @@
   text-align: right;
 }
 
-.motto {
+.mottoText {
   font-family: "roboto mono";
+}
+
+.greetText {
+  font-size: 20px;
 }
