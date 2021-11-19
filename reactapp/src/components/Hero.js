@@ -1,15 +1,22 @@
 import { Box, Grid, Grommet, Video, Text, Stack, Anchor } from "grommet";
 import { HeroBox, GreetText, MottoText } from "./StyledComponents";
 import "./hero.css";
+import { useRef } from "react";
 
 export default function Hero() {
+  // const video = useRef(null);
+  // video.play();
+  // // document.getElementById("video").play();
   return (
     <Grommet>
       <div className="heroBox">
         <video
+          id="video"
+          playsInline={1}
+          // ref={video}
           autoplay={1}
-          loop
-          muted
+          loop={1}
+          muted={1}
           className="video"
           poster="images/frame1.png"
         >
