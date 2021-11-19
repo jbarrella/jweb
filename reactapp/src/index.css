@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Zen+Kaku+Gothic+Antique&display=swap");
 
 body {
   height: 100%;
@@ -11,7 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html { height: 100vh; }
+html {
+  height: 100vh;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
