@@ -9,8 +9,9 @@ export default function Hero() {
         <video
           autoplay={1}
           loop
+          muted
           className="video"
-          // poster="https://assets.codepen.io/6093409/river.jpg"
+          poster="images/frame1.png"
         >
           <source src="images/mobius_bind.mp4" type="video/mp4" />
         </video>
@@ -23,7 +24,7 @@ export default function Hero() {
             <Anchor
               label="@pak"
               size="small"
-              color="white"
+              color="dark-6"
               href="https://superrare.com/pak"
             />
           </Box>
