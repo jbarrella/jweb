@@ -8,7 +8,6 @@ import Home from "./components/Home";
 import { Grommet } from "grommet";
 
 export default function App() {
-  window.scrollTo(0,1);
   const [dltheme, setTheme] = useState("dark");
   const theme = {
     global: {
