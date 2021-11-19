@@ -8,19 +8,14 @@
   text-align: center;
 }
 
-.heroBox::before {
+.video {
   border-radius: 20px;
-  content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-image: url("mobius_bind.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  filter: brightness(0.8);
 }
 
 .heroTextBox {

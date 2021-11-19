@@ -34,11 +34,22 @@
   border-radius: 50%;
 }
 
-
 .sectionHeading {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   margin-bottom: 30px;
   font-weight: bold;
+}
+
+.gameTheoryBackgroud {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  filter: brightness(0.5);
+}
+
+.gameTheoryTextBox {
+  position: relative;
+  z-index: 1;
 }

@@ -63,6 +63,7 @@ export const StyledPageLink = styled(StyledHomeLink)`
 `;
 
 export const StlyedNFTCard = styled(Card)`
+  position: relative;
   transition: transform 0.5s ease;
   padding: 25%;
   text-align: center;
@@ -119,7 +120,7 @@ export const gameTheoryProjectBox = styled(Box)`
   &::after {
     background-color: blue;
   }
-`
+`;
 
 export const ProjectBox = styled(Box)`
   @media screen and (max-width: 750px) {

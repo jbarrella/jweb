@@ -140,20 +140,14 @@ export default function Home({ theme, setTheme }) {
             style={{ color: "inherit", textDecoration: "none" }}
             to="/gametheory"
           >
-            <StlyedNFTCard
-              justify="center"
-              height="100px"
-              background={{
-                image:
-                  "url(https://cdn.knownorigin.io/cdn/images/network/1/edition/2643000)",
-                size: "cover",
-                opacity: "0.5",
-              }}
-              elevation="none"
-            >
-              <Heading color="white" level="3">
+            <StlyedNFTCard justify="center" height="100px" elevation="none">
+              <Heading className="gameTheoryTextBox" color="white" level="3">
                 Quantitative Analysis of Game Theory Problem
               </Heading>
+              <img
+                src="https://cdn.knownorigin.io/cdn/images/network/1/edition/2643000"
+                className="gameTheoryBackgroud"
+              />
             </StlyedNFTCard>
           </Link>
           {/* <Link

@@ -6,13 +6,17 @@ export default function Hero() {
   return (
     <Grommet>
       <div className="heroBox">
+        <video
+          autoplay={1}
+          loop
+          className="video"
+          // poster="https://assets.codepen.io/6093409/river.jpg"
+        >
+          <source src="images/mobius_bind.mp4" type="video/mp4" />
+        </video>
         <Box justify="center" className="heroTextBox">
-          <GreetText color="white">
-            Hi, I'm Jason.
-          </GreetText>
-          <MottoText color="white">
-            I write &lt;code&gt;
-          </MottoText>
+          <GreetText color="white">Hi, I'm Jason.</GreetText>
+          <MottoText color="white">I write &lt;code&gt;</MottoText>
         </Box>
         <Box justify="end" className="heroCredit" height="50px">
           <Box pad="15px" alignSelf="end">
