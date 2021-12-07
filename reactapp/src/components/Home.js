@@ -153,9 +153,9 @@ export default function Home({ theme, setTheme }) {
               />
             </StlyedNFTCard>
           </Link>
-          <Link
+          <a
             style={{ color: "inherit", textDecoration: "none" }}
-            to="https://rentmap.netlify.app"
+            href="https://rentmap.netlify.app"
           >
             <StlyedNFTCard justify="center" height="100px" elevation="none">
               <Heading className="projectBoxText" color="white" level="3">
@@ -166,7 +166,7 @@ export default function Home({ theme, setTheme }) {
                 className="projectBoxBackground rentmapBackground"
               />
             </StlyedNFTCard>
-          </Link>
+          </a>
           {/* <Link
             style={{ color: "inherit", textDecoration: "none" }}
             to="/stats"
