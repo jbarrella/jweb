@@ -72,8 +72,7 @@ export default function Timeline({ theme }) {
               id="4"
             />
             <Text color={textColor} className="text" margin={{ left: "20px" }}>
-              <b>2019</b> - Completed B.Sc. Honours degree in Physics (Dean's
-              merit list award).
+              <b>2019</b> - Completed B.Sc. Honours degree in Physics.
             </Text>
           </Box>
           <Box direction="row">
@@ -96,7 +95,7 @@ export default function Timeline({ theme }) {
             <Text color={textColor} className="text" margin={{ left: "20px" }}>
               <b>2020</b> - Began a
               <span style={{ color: "#FD6FFF" }}> Masters degree</span> in
-              high-energy physics (research scholarship).
+              high-energy physics.
             </Text>
           </Box>
           <Box direction="row">

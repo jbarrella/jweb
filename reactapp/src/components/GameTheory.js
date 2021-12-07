@@ -8,6 +8,7 @@ import "./gametheory.css";
 
 export default function GameTheory({ theme, setTheme }) {
   const textColor = () => (theme == "light" ? "black" : "white");
+  const openLinkTab = (url) => window.open(url, '_blank', 'noopener,noreferrer')
   return (
     <Grommet>
       <NavBar theme={theme} setTheme={setTheme} />
@@ -32,7 +33,7 @@ export default function GameTheory({ theme, setTheme }) {
             The Problem
           </Text>
           <Box gap="medium">
-            <Text margin={{ right: "40px" }} color={textColor()}>
+            <Text className='solutionText' margin={{ bottom: "20px" }} color={textColor()}>
               This problem was solved as part of the interview process for the
               proprietary trading firm, Optiver. <br />
               <br />
@@ -76,7 +77,7 @@ export default function GameTheory({ theme, setTheme }) {
             Solution
           </Text>
           <div className="solutionGrid">
-            <Text textAlign="center" className="text1" color={textColor}>
+            <Text className="solutionText text1" color={textColor}>
               Both analytical and numerical solutions were developed. Put
               simply, the goal for each player is to maximize the sum of the
               space that is nearest to them on either sides. As it turns out,
@@ -95,8 +96,8 @@ export default function GameTheory({ theme, setTheme }) {
             >
               <Image width="100%" src="images/gametheory/b.png"></Image>
             </Box>
-            <Box className="text2" margin={{ top: "30px", bottom: "30px" }}>
-              <Text textAlign="center" color={textColor}>
+            <Box className="solutionText text2" margin={{ top: "30px", bottom: "30px" }}>
+              <Text color={textColor}>
                 In the first question, contestant A plays 0 and we are asked to
                 determine the optimal move for contestant B. In order to
                 maximize outside space, contestant B should simply play 2/3 of
@@ -115,7 +116,7 @@ export default function GameTheory({ theme, setTheme }) {
             >
               <Image width="100%" src="images/gametheory/aprob.png"></Image>
             </Box>
-            <Text textAlign="center" className="text3" color={textColor}>
+            <Text className="solutionText text3" color={textColor}>
               The optimal move for contestant A is exactly 1/4 (or 3/4, by
               symmetry). This will force contestant B to play 2/3 along the
               remaining space of the board-line as described before and
@@ -144,7 +145,7 @@ export default function GameTheory({ theme, setTheme }) {
             ></Button>
             <StyledAnchor
               icon={<SiGithub size="50px" />}
-              href="https://github.com/jbarrella/optiver-interview"
+              onClick={() => openLinkTab('https://github.com/jbarrella/optiver-interview')}
             />
           </Box>
         </ContentBox>

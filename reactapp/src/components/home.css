@@ -42,14 +42,18 @@
   font-weight: bold;
 }
 
-.gameTheoryBackgroud {
+.projectBoxBackground {
   position: absolute;
   width: 100%;
   left: 0;
   filter: brightness(0.5);
 }
 
-.gameTheoryTextBox {
+.rentmapBackground {
+  filter: brightness(0.7);
+}
+
+.projectBoxText {
   position: relative;
   z-index: 1;
 }

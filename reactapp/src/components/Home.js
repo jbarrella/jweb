@@ -21,6 +21,7 @@ export default function Home({ theme, setTheme }) {
   const projectSection = useRef(null);
   const textColor = () => (theme == "light" ? "black" : "white");
   const accentTextColor = () => (theme == "light" ? "brand" : "pink");
+  const openLinkTab = (url) => window.open(url, '_blank', 'noopener,noreferrer')
   return (
     <Grommet full>
       <NavBar
@@ -45,36 +46,38 @@ export default function Home({ theme, setTheme }) {
               </Text>
               <Box height="10px" />
               <Text className="rolesText" color="red">
-                Data Science / Blockchain / Full-stack
+                Data Science / Blockchain / Full-Stack
               </Text>
             </Box>
             <Box
               border={{ color: "#FFCA58", size: "6px" }}
               className="ppImageBox"
             >
-              <Image fill src="/images/pp-filter-1.png"></Image>
+              <Image fill src="/images/pp2.png"></Image>
             </Box>
           </PpBox>
           <Text margin={{ top: "30px" }} bioText color={textColor}>
-            Jason is a Masters graduate in Physics from the University of Cape
-            Town in 2022. He has since been working as a freelance software
-            developer. He has a passion for solving difficult problems related
-            to STEM fields. When not working, he enjoys climbing, reading, and
+            I am a 2022 Masters graduate in high-energy physics from the University of Cape
+            Town. I have since been working as a freelance software
+            developer. I have a passion for solving difficult problems related
+            to STEM fields. When not working, I enjoy climbing, reading, and
             travelling.
           </Text>
           <Box height="40px" />
           <Nav gap="15px" alignSelf="end" className="socials" direction="row">
             <StyledAnchor
               icon={<SiGithub size="22px" />}
-              href="https://github.com/jbarrella"
+              onClick={() => openLinkTab('https://github.com/jbarrella')}
             />
             <StyledAnchor
               icon={<SiLinkedin size="22px" />}
-              href="https://www.linkedin.com/in/jason-barrella-725910178/"
+              onClick={() => openLinkTab('https://www.linkedin.com/in/jason-barrella-725910178/')}
+
             />
             <StyledAnchor
               icon={<SiUpwork size="22px" />}
-              href="https://www.upwork.com/freelancers/~0169fe33838c5e48c9"
+              onClick={() => openLinkTab('https://www.upwork.com/freelancers/~0169fe33838c5e48c9')}
+
             />
           </Nav>
         </ContentBox>
@@ -125,7 +128,7 @@ export default function Home({ theme, setTheme }) {
         color={textColor}
         textAlign="center"
         className="projectHeading"
-        // size="80px"
+      // size="80px"
       >
         Projects
       </ProjectHeading>
@@ -141,12 +144,26 @@ export default function Home({ theme, setTheme }) {
             to="/gametheory"
           >
             <StlyedNFTCard justify="center" height="100px" elevation="none">
-              <Heading className="gameTheoryTextBox" color="white" level="3">
+              <Heading className="projectBoxText" color="white" level="3">
                 Quantitative Analysis of Game Theory Problem
               </Heading>
               <img
                 src="https://cdn.knownorigin.io/cdn/images/network/1/edition/2643000"
-                className="gameTheoryBackgroud"
+                className="projectBoxBackground"
+              />
+            </StlyedNFTCard>
+          </Link>
+          <Link
+            style={{ color: "inherit", textDecoration: "none" }}
+            to="https://rentmap.netlify.app"
+          >
+            <StlyedNFTCard justify="center" height="100px" elevation="none">
+              <Heading className="projectBoxText" color="white" level="3">
+                Rent Map
+              </Heading>
+              <img
+                src="images/rentmap/rentmapBackground.png"
+                className="projectBoxBackground rentmapBackground"
               />
             </StlyedNFTCard>
           </Link>

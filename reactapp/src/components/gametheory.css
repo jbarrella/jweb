@@ -73,15 +73,16 @@
     right: 0%;
   }
   .text1 {
-    grid-column: span 1;
     grid-row: 1 / 1;
   }
   .text2 {
-    grid-column: span 1;
     grid-row: 3 / 3;
   }
   .text2 {
-    grid-column: span 1;
     grid-row: 5 / 5;
+  }
+  .solutionText {
+    grid-column: span 1;
+    text-align: center;
   }
 }
