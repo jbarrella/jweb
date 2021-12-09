@@ -16,8 +16,8 @@ import {
 export default function Home({ projectSection, aboutSection, theme, setTheme }) {
   // const history = useHistory();
   const router = useRouter();
+  const { location } = useRouter()
   const handleSectionLink = (sectionRef, sectionId) => {
-    const { location } = useRouter()
     if (location.pathname == "/") {
       sectionRef.current.scrollIntoView({
         behavior: "smooth",

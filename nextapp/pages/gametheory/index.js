@@ -33,7 +33,7 @@ export default function GameTheory({ theme, setTheme }) {
             The Problem
           </Text>
           <Box gap="medium">
-            <Text className='solutionText' margin={{ bottom: "20px" }} color={textColor()}>
+            <Text className={styles.solutionText} margin={{ bottom: "20px" }} color={textColor()}>
               This problem was solved as part of the interview process for the
               proprietary trading firm, Optiver. <br />
               <br />

@@ -23,7 +23,7 @@ export default function Hero() {
           <source src="images/mobius_bind.mp4" type="video/mp4" />
         </video>
         <Box justify="center" className={styles.heroTextBox}>
-          <GreetText color="white">Hi, I'm Jason.</GreetText>
+          <GreetText color="white">Hi, I&apos;m Jason.</GreetText>
           <MottoText color="white">I write &lt;code&gt;</MottoText>
         </Box>
         <Box justify="end" className={styles.heroCredit} height="50px">
