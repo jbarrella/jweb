@@ -1,38 +1,22 @@
 import { Box, Grommet, Anchor } from "grommet";
 import { GreetText, MottoText } from "./StyledComponents";
+import { useMemo } from 'react';
 import "./hero.css";
 
 export default function Hero() {
-  // const video = useRef(null);
-  // video.play();
-  // // document.getElementById("video").play();
-  const HeroBackground = () => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth > 500) {
-      return (
+  return (
+    <Grommet>
+      <div className="heroBox">
         <video
-          playsInline={1}
+          // playsInline={1}
           autoPlay={1}
           loop={1}
           muted={1}
           className="video"
           poster="images/frame1.png"
         >
-          <source src="images/mobius_bind.mp4" type="video/mp4" />
+          <source src="https://user-images.githubusercontent.com/32719308/145473742-667c2f96-72c4-4224-9be9-028515f87337.mp4" type="video/mp4" />
         </video>
-      )
-    } else {
-      return (
-        <img
-          className="video"
-          src="images/mobius_bind.gif" />
-      )
-    }
-  }
-  return (
-    <Grommet>
-      <div className="heroBox">
-        <HeroBackground />
         <Box justify="center" className="heroTextBox">
           <GreetText color="white">Hi, I'm Jason.</GreetText>
           <MottoText color="white">I write &lt;code&gt;</MottoText>
