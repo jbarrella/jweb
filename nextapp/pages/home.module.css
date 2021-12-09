@@ -1,0 +1,64 @@
+@media (min-width: 1920px) {
+  .bioBox {
+    max-width: 50vw;
+  }
+}
+
+.rolesText {
+  font-family: "roboto mono";
+}
+
+.bio {
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.bioBox {
+  border-radius: 20px;
+  margin-bottom: 40px;
+  max-width: 770px;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+@media (max-width: 500px) {
+  .ppImageBox {
+    margin-top: 20px;
+  }
+}
+
+.ppImageBox {
+  flex: none;
+  width: min(170px, max(20vw, 110px));
+  height: min(170px, max(20vw, 110px));
+  border-radius: 50%;
+}
+
+.sectionHeading {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.projectBoxBackground {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  filter: brightness(0.5);
+}
+
+.rentmapBackground {
+  filter: brightness(0.7);
+}
+
+.projectBoxText {
+  position: relative;
+  z-index: 1;
+}
+
+.themeBody {
+  transition: background-color 0.3s linear;
+}
+

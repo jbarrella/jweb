@@ -1,0 +1,35 @@
+@media (max-width: 500px) {
+  .buttons {
+    display: none;
+  }
+  .titleDesktop {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .titleMobile {
+    display: none;
+  }
+}
+
+.headerDiv {
+  display: grid;
+  margin: auto;
+  width: clamp(70vw, 1200px, 90vw);
+  grid-template-columns: 9fr 1fr;
+  grid-template-rows: 70px;
+  margin-bottom: 35px;
+}
+
+.sectionLinks {
+  grid-column: 1 / 1;
+}
+
+.buttonBox {
+  width: max(100%, 100px);
+}
+
+.menu {
+  align-self: center;
+}

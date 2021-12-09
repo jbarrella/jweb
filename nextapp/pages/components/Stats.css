@@ -1,0 +1,16 @@
+.box-class {
+    border-radius: 12px;
+    /* background: linear-gradient(
+    100deg,
+    rgb(252, 206, 231) 0%,
+    rgb(255, 183, 237) 100%); */
+}
+
+.my-radio label div div {
+    width: 20px;
+    height: 20px;
+}
+
+.my-radio label {
+    font-size: 15px;
+}
