@@ -2,7 +2,7 @@ import styles from "./gametheory.module.css";
 import NavBar from "../components/NavBar";
 import Interactive from "./Interactive";
 import { Box, Grommet, Heading, Text, Image, Grid, Button } from "grommet";
-import { ContentBox, StyledAnchor } from "../components/StyledComponents";
+import { ContentBox, StyledAnchor } from "../../styles/StyledComponents";
 import { SiGithub } from "react-icons/si";
 
 

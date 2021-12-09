@@ -11,7 +11,7 @@ import {
   // StyledPageLink,
   Hamburger,
   HamburgerBox,
-} from "./StyledComponents";
+} from "../../styles/StyledComponents";
 
 export default function Home({ projectSection, aboutSection, theme, setTheme }) {
   // const history = useHistory();

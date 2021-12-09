@@ -1,5 +1,5 @@
 import { Box, Grid, Grommet, Video, Text, Stack, Anchor } from "grommet";
-import { HeroBox, GreetText, MottoText } from "./StyledComponents";
+import { HeroBox, GreetText, MottoText } from "../../styles/StyledComponents";
 import styles from "./hero.module.css";
 import { useRef } from "react";
 

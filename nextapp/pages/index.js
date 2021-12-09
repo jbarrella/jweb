@@ -10,7 +10,7 @@ import {
   ProjectHeading,
   StlyedNFTCard,
   PpBox
-} from "./components/StyledComponents";
+} from "../styles/StyledComponents";
 import Link from 'next/link';
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
