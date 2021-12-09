@@ -55,7 +55,7 @@ export default function Home({ theme, setTheme }) {
             </Box>
           </PpBox>
           <Text margin={{ top: "30px" }} bioText color={textColor}>
-            I am a 2022 Masters graduate in high-energy physics from the University of Cape
+            I'm a 2022 Masters graduate in high-energy physics from the University of Cape
             Town. I have since been working as a freelance software
             developer. I have a passion for solving difficult problems related
             to STEM fields. When not working, I enjoy climbing, reading, and
