@@ -42,7 +42,7 @@ export default function Stats() {
           width="35vw"
           // background="light-3"
           elevation="medium"
-          className={styles.box-class}
+          className={styles['box-class']}
           border={{ color: "brand", size: "2px" }}
         >
           <Box width="100%" margin={{ left: "40px" }}>
