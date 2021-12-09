@@ -1,6 +1,6 @@
 import { Box, Grommet, Anchor } from "grommet";
 import { GreetText, MottoText } from "./StyledComponents";
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import "./hero.css";
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
     <Grommet>
       <div className="heroBox">
         <video
-          // playsInline={1}
+          playsInline={1}
           autoPlay={1}
           loop={1}
           muted={1}
