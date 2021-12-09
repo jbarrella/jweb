@@ -1,7 +1,7 @@
 import { React } from "react";
-import { Heading, Grommet, Box, Button, Menu } from "grommet";
+import { Heading, Grommet, Box, Button } from "grommet";
 import { Sun, Moon, Menu as MenuIcon } from "grommet-icons";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   StyledHomeLink,
   ThemeSwitch,
@@ -13,9 +13,9 @@ import "./navbar.css";
 
 export default function Home({ projectSection, aboutSection, theme, setTheme }) {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleSectionLink = (sectionRef, sectionId) => {
-    if (location.pathname == "/") {
+    if (location.pathname === "/") {
       sectionRef.current.scrollIntoView({
         behavior: "smooth",
       });
@@ -97,13 +97,13 @@ export default function Home({ projectSection, aboutSection, theme, setTheme }) 
             <Button
               focusIndicator={false}
               icon={
-                theme == "light" ? (
+                theme === "light" ? (
                   <Moon color="black" size="25px" />
                 ) : (
                   <Sun color="white" className="lightIcon" size="25px" />
                 )
               }
-              onClick={() => setTheme(theme == "light" ? "dark" : "light")}
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             ></Button>
           </ThemeSwitch>
           <HamburgerBox
@@ -122,14 +122,14 @@ export default function Home({ projectSection, aboutSection, theme, setTheme }) 
                 {
                   label: "About",
                   onClick: () => {
-                    history.push("/");
+                    navigate("/");
                     handleSectionLink(aboutSection, "about");
                   },
                 },
                 {
                   label: "Projects",
                   onClick: () => {
-                    history.push("/");
+                    navigate("/");
                     handleSectionLink(projectSection, "projects");
                   },
                 },

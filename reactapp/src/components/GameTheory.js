@@ -1,13 +1,12 @@
 import NavBar from "./NavBar";
 import Interactive from "./Interactive";
-import { Box, Grommet, Heading, Text, Image, Grid, Button } from "grommet";
+import { Box, Grommet, Heading, Text, Image, Button } from "grommet";
 import { ContentBox, StyledAnchor } from "./StyledComponents";
 import { SiGithub } from "react-icons/si";
-
 import "./gametheory.css";
 
 export default function GameTheory({ theme, setTheme }) {
-  const textColor = () => (theme == "light" ? "black" : "white");
+  const textColor = () => (theme === "light" ? "black" : "white");
   const openLinkTab = (url) => window.open(url, '_blank', 'noopener,noreferrer')
   return (
     <Grommet>
@@ -24,7 +23,7 @@ export default function GameTheory({ theme, setTheme }) {
         <ContentBox
           alignSelf="center"
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           pad="medium"
           direction="column"
@@ -68,7 +67,7 @@ export default function GameTheory({ theme, setTheme }) {
         <ContentBox
           alignSelf="center"
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           pad="medium"
           direction="column"
@@ -153,7 +152,7 @@ export default function GameTheory({ theme, setTheme }) {
           alignSelf="center"
           justify="center"
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           pad="medium"
         >

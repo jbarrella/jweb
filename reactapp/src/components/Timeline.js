@@ -1,18 +1,13 @@
 import {
   Box,
-  Grommet,
-  Heading,
   Text,
-  Image,
-  Nav,
   Stack,
   Diagram,
-  Button,
 } from "grommet";
 import "./timeline.css";
 
 export default function Timeline({ theme }) {
-  const textColor = () => (theme == "light" ? "black" : "white");
+  const textColor = () => (theme === "light" ? "black" : "white");
   const timelineNodes = [1, 2, 3, 4, 5, 6, 7];
   const linkNodes = (node) => {
     return {

@@ -13,7 +13,7 @@ const theme = {
 };
 
 export default function Interactive({ dltheme }) {
-  const textColor = () => (dltheme == "light" ? "black" : "white");
+  const textColor = () => (dltheme === "light" ? "black" : "white");
   const [apos, setAPos] = useState(0);
   const epsilon = 0.01;
   const canvas = useRef(null);
@@ -58,6 +58,8 @@ export default function Interactive({ dltheme }) {
         return "#81FCED";
       case cpos:
         return "#FFCA58";
+      default:
+        return "#FD6FFF"
     }
   };
   const draw = () => {
@@ -65,7 +67,7 @@ export default function Interactive({ dltheme }) {
     const cpos = getCPos();
     const lineYPos = 150;
     const cwidth = canvas.current.width;
-    const cheight = canvas.current.height;
+    // const cheight = canvas.current.height;
     console.log(cwidth);
     var ctx = canvas.current.getContext("2d");
     ctx.clearRect(0, 0, 700, 300);

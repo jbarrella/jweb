@@ -1,7 +1,6 @@
-import { Box, Grid, Grommet, Video, Text, Stack, Anchor } from "grommet";
-import { HeroBox, GreetText, MottoText } from "./StyledComponents";
+import { Box, Grommet, Anchor } from "grommet";
+import { GreetText, MottoText } from "./StyledComponents";
 import "./hero.css";
-import { useRef } from "react";
 
 export default function Hero() {
   // const video = useRef(null);

@@ -67,6 +67,7 @@ export const StlyedNFTCard = styled(Card)`
   transition: transform 0.5s ease;
   padding: 25%;
   text-align: center;
+  overflow: hidden;
   width: clamp(22vw, 340px, 90vw);
   &:hover {
     transform: scale(1.05);

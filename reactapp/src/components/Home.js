@@ -1,7 +1,5 @@
-import "../App.css";
 import "./home.css";
-import "../index.css";
-import { React, useState, useRef } from "react";
+import { React, useRef } from "react";
 import { Box, Grommet, Heading, Text, Image, Nav, Button } from "grommet";
 import {
   StyledAnchor,
@@ -9,7 +7,7 @@ import {
   ProjectBox,
   ProjectHeading,
 } from "./StyledComponents";
-import { Link, HashRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Timeline from "./Timeline";
@@ -19,8 +17,8 @@ import { SiUpwork, SiGithub, SiLinkedin } from "react-icons/si";
 export default function Home({ theme, setTheme }) {
   const aboutSection = useRef(null);
   const projectSection = useRef(null);
-  const textColor = () => (theme == "light" ? "black" : "white");
-  const accentTextColor = () => (theme == "light" ? "brand" : "pink");
+  const textColor = () => (theme === "light" ? "black" : "white");
+  // const accentTextColor = () => (theme === "light" ? "brand" : "pink");
   const openLinkTab = (url) => window.open(url, '_blank', 'noopener,noreferrer')
   return (
     <Grommet full>
@@ -34,7 +32,7 @@ export default function Home({ theme, setTheme }) {
       <Box align="center" direction="column">
         <ContentBox
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           direction="column"
           pad="medium"
@@ -83,7 +81,7 @@ export default function Home({ theme, setTheme }) {
         </ContentBox>
         <ContentBox
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           pad="medium"
           direction="column"
@@ -108,7 +106,7 @@ export default function Home({ theme, setTheme }) {
         </ContentBox>
         <ContentBox
           background={
-            theme == "light" ? { color: "#f4eee4" } : { color: "#252525" }
+            theme === "light" ? { color: "#f4eee4" } : { color: "#252525" }
           }
           pad="medium"
           direction="column"
@@ -148,6 +146,7 @@ export default function Home({ theme, setTheme }) {
                 Quantitative Analysis of Game Theory Problem
               </Heading>
               <img
+                alt=''
                 src="https://cdn.knownorigin.io/cdn/images/network/1/edition/2643000"
                 className="projectBoxBackground"
               />
@@ -162,6 +161,7 @@ export default function Home({ theme, setTheme }) {
                 Rent Map
               </Heading>
               <img
+                alt=''
                 src="images/rentmap/rentmapBackground.png"
                 className="projectBoxBackground rentmapBackground"
               />
