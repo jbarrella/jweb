@@ -39,7 +39,7 @@ export default function Home({ projectSection, aboutSection, theme, setTheme }) 
               JB
             </StyledHomeLink>
             <StyledHomeLink className="title-desktop" to="/">
-              Jason Barrella
+              GloStream Limited
             </StyledHomeLink>
           </Heading>
           <Heading
